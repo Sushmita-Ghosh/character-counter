@@ -1,0 +1,97 @@
+:root {
+  --font-primary: "DM Sans", sans-serif;
+  --fs-1: 64px;
+  --fs-1-m: 40px;
+  --fs-2: 24px;
+  --fs-3: 20px;
+  --fs-4: 16px;
+  --fw-1: 700;
+  --fw-2: 600;
+  --fw-3: 400;
+  --fw-4: 400;
+  --lh-1: 100%;
+  --lh-2: 130%;
+  --lh-3: 140%;
+  --lh-4: 130%;
+  --ls-1: -1px;
+  --ls-2: -1px;
+  --ls-3: -0.6px;
+  --ls-4: -0.6px;
+  --neutral-0: RGB(255, 255, 255);
+  --neutral-100: RGB(242, 242, 247);
+  --neutral-200: RGB(228, 228, 239);
+  --neutral-600: RGB(64, 66, 84);
+  --neutral-700: RGB(42, 43, 55);
+  --neutral-800: RGB(33, 34, 44);
+  --neutral-900: RGB(18, 19, 26);
+  --purple-400: RGB(211, 160, 250);
+  --purple-500: RGB(194, 124, 248);
+  --yellow-500: RGB(255, 159, 0);
+  --orange-500: RGB(254, 129, 89);
+  --orange-800: RGB(218, 55, 1);
+}
+
+.dark-mode {
+  /* neutral-100(dark)/neutral-900(light) */
+  --neutral-set-1: RGB(242, 242, 247);
+  /* neutral-200(dark)/neutral-700(light) */
+  --neutral-set-2: RGB(228, 228, 239);
+  /* neutral-700(dark)/neutral-100(light) */
+  --neutral-set-3: RGB(42, 43, 55);
+  /* neutral-200(dark)/neutral-900(light) */
+  --neutral-set-4: RGB(228, 228, 239);
+  /* neutral-800(dark)/neutral-100(light) */
+  --neutral-set-5: RGB(33, 34, 44);
+  /* white(dark)/neutral-900(light) */
+  --neutral-set-6: RGB(255, 255, 255);
+  /* neutral-600(dark)/neutral-200(light) */
+  --neutral-set-7: RGB(64, 66, 84);
+  /* orange-500(dark)/orange-800(light) */
+  --highlight-set-1: RGB(254, 129, 89);
+  --bg: url("./assets/bg-dark-theme.png");
+}
+
+.light-mode {
+  --neutral-set-1: RGB(18, 19, 26);
+  --neutral-set-2: RGB(42, 43, 55);
+  --neutral-set-3: RGB(242, 242, 247);
+  --neutral-set-4: RGB(18, 19, 26);
+  --neutral-set-5: RGB(242, 242, 247);
+  --neutral-set-6: RGB(18, 19, 26);
+  --neutral-set-7: RGB(228, 228, 239);
+  --highlight-set-1: RGB(218, 55, 1);
+  --bg: url("./assets/bg-light-theme.png");
+}
+
+body {
+  width: 100vw;
+  font-family: var(--font-primary);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+body::before {
+  content: ""; /* Creates an invisible element before the body’s content, 
+  allowing to apply a background image and styles to it */
+  position: fixed; /* Fixes the position relative to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Places background behind other content */
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

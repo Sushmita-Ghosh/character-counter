@@ -1,0 +1,67 @@
+.banner {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: 110%;
+}
+
+.banner-value {
+  font-size: var(--fs-1-m);
+  font-weight: var(--fw-1);
+  letter-spacing: var(--ls-1);
+  line-height: var(--lh-1);
+}
+
+.banner-title {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-3);
+  letter-spacing: var(--ls-3);
+  line-height: var(--lh-3);
+}
+
+.banner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.total-count {
+  background-color: var(--purple-400);
+  background-image: url(../../assets/pattern-character-count.svg);
+}
+
+.word-count {
+  background-color: var(--yellow-500);
+  background-image: url(../../assets/pattern-word-count.svg);
+}
+
+.sentence-count {
+  background-color: var(--orange-500);
+  background-image: url(../../assets/pattern-sentence-count.svg);
+}
+
+@media only screen and (min-width: 768px) {
+  .banner {
+    flex-basis: 224px;
+    flex-grow: 1;
+    padding: 12px;
+  }
+
+  .banner-value {
+    font-size: var(--fs-1);
+  }
+
+  .banner-list {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .banner {
+    padding: 16px;
+  }
+}

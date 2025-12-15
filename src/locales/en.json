@@ -1,0 +1,20 @@
+{
+  "app_title": "Analyze your text in real-time.",
+  "input_placeholder": "Start typing here (or paste your text)",
+  "option_title_excl_space": "Exclude Spaces",
+  "option_title_char_limit": "Set Character Limit",
+  "reading_time_display": "Approx. reading time: {reading_time_value}",
+  "reading_time_value": {
+    "none": "0 minute",
+    "one": "< 1 minute",
+    "other": "< %d minutes"
+  },
+  "banner_title_total": "Total Characters",
+  "banner_title_word": "Word Count",
+  "banner_title_sentence": "Sentence Count",
+  "density_title": "Letter Density",
+  "density_list_open_label": "See more",
+  "density_list_close_label": "See less",
+  "no_input_no_density": "No characters found. Start typing to see letter density.",
+  "limit_reached_alert": "Limit reached! Your text exceeds {max_length} characters."
+}
