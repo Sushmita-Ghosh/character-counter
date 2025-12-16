@@ -82,7 +82,7 @@ export default function DensityList({ userinput }) {
     const data = Object.entries(frequencyMap).map(([letter, count]) => ({
       letter,
       count,
-      ratio: Math.round((count / totalLetters) * 100),
+      ratio: Number(((count / totalLetters) * 100).toFixed(2)),
     }));
 
     // Sort descending by count
@@ -107,7 +107,7 @@ export default function DensityList({ userinput }) {
         {firstList.map((item) => (
           <Density
             key={item.letter}
-            letter={item.letter}
+            letter={item.letter.toUpperCase()}
             count={item.count}
             ratio={item.ratio}
           />
@@ -116,7 +116,7 @@ export default function DensityList({ userinput }) {
           secondList.map((item) => (
             <Density
               key={item.letter}
-              letter={item.letter}
+              letter={item.letter.toUpperCase()}
               count={item.count}
               ratio={item.ratio}
             />

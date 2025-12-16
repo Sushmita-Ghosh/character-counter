@@ -86,7 +86,7 @@ export default function Main() {
 
         {/* TODO */}
         {/* conditional density rendering */}
-        <DensityList />
+        <DensityList userinput={content.userinput} />
       </section>
     </main>
   );
