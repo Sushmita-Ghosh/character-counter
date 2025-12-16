@@ -6,7 +6,7 @@ A **React-based web application** to analyze text input, providing word, sentenc
 
 ## Live Demo
 
-Check out the app live: [🔗 Demo Link][https://character-counter-silk.vercel.app/]
+Check out the app live: [Demo Link](https://character-counter-silk.vercel.app/)
 
 ---
 
