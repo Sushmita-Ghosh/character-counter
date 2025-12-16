@@ -15,6 +15,7 @@
   display: block;
 }
 
+/*When limit is reached we have a border across the textarea with shadow*/
 .no-limit:focus-visible {
   outline: 1px solid var(--purple-500);
   box-shadow: 0 0 8px var(--purple-500);

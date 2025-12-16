@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import en from "../locales/en.json";
+import en from "../locales/en.json"; // all the texts through out the application
 
 const TextContext = createContext();
 

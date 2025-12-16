@@ -1,26 +1,44 @@
-import { lazy } from "react";
+/**
+ * This component renders the user input textarea and handles input changes
+ * also applies class to textarea when limit is reached
+ */
+
 import { useText } from "../../context/TextContext";
 import "./TextInput.css";
 
 export default function TextInput({ content, setContent, isLimitReached }) {
   const text = useText();
-  const limitClass = isLimitReached ? "limit-reached" : "no-limit";
 
-  const handleInput = (e) => {
-    setContent((prev) => ({ ...prev, userinput: e.target.value }));
+  // TODO:
+  // Receive props
+  // - content
+  // - setContent
+  // - isLimitReached
+
+  // TODO:
+  // Handle input change
+
+  const handleInputChange = (event) => {
+    // console.log(event.target.value);
+    setContent((prev) => ({
+      ...prev,
+      userinput: event.target.value,
+    }));
   };
+
+  const limitClass = isLimitReached ? "limit-reached" : "no-limit";
 
   return (
     <label>
       <textarea
-        name=""
-        id=""
+        name="userinput"
+        id="userinput"
         placeholder={text.input_placeholder}
-        onChange={handleInput}
-        className={`${limitClass} text-input`}
-        maxLength={content.maxlength}
+        className={`text-input ${limitClass}`}
         value={content.userinput}
-      ></textarea>
+        maxLength={content.maxlength}
+        onChange={handleInputChange}
+      />
     </label>
   );
 }

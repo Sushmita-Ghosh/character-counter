@@ -6,13 +6,10 @@ export default function Density({ letter, count, ratio }) {
       <label htmlFor={letter} className="letter">
         {letter}
       </label>
-      <progress
-        id={letter}
-        value={ratio}
-        max="100"
-        className="progress"
-      ></progress>
-      <div className="ratio">{`${count} (${ratio}%)`}</div>
+      <progress id={letter} value={ratio} max="100" />
+      <div className="ratio">
+        {count} ({ratio}%)
+      </div>
     </div>
   );
 }
