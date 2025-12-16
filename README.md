@@ -6,7 +6,7 @@ A **React-based web application** to analyze text input, providing word, sentenc
 
 ## Live Demo
 
-Check out the app live: [🔗 Demo Link](https://your-demo-link.com)
+Check out the app live: [🔗 Demo Link]([https://character-counter-silk.vercel.app/])
 
 ---
 
@@ -19,8 +19,6 @@ Check out the app live: [🔗 Demo Link](https://your-demo-link.com)
 - [Usage](#usage)
 - [Folder Structure](#folder-structure)
 - [Components](#components)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
@@ -41,15 +39,17 @@ Check out the app live: [🔗 Demo Link](https://your-demo-link.com)
 
 ### Light Mode
 
-![Light Mode](./screenshots/light-mode.png)
+<img width="700" height="506" alt="image" src="https://github.com/user-attachments/assets/0ec342b5-5b21-4871-b382-a7c279a369e7" />
+
 
 ### Dark Mode
 
-![Dark Mode](./screenshots/dark-mode.png)
+<img width="700" height="506" alt="image" src="https://github.com/user-attachments/assets/2e6dca05-8a79-4031-b2ac-6c5c088b5522" />
 
 ### Density List Example
 
-![Density List](./screenshots/density-list.png)
+<img width="859" height="763" alt="image" src="https://github.com/user-attachments/assets/0e4794a1-a719-4e23-b769-f9efc5f0edf4" />
+
 
 > Replace the image paths with your actual screenshot files.
 
@@ -98,7 +98,7 @@ npm start
 7. Observe **estimated reading time** updating automatically.
 
 ## Folder Structure
-
+```text
 src/
 ├─ components/
 │ ├─ Header/
@@ -115,6 +115,7 @@ src/
 │ ├─ bannerUtils.js
 ├─ App.jsx
 └─ index.js
+```
 
 ## Components Overview
 
