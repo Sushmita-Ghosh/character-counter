@@ -67,7 +67,8 @@ export default function Main() {
             setContent={setContent}
           />
           <ReadingTime
-          /* TODO */
+            /* TODO */
+            userinput={content.userinput}
           />
         </div>
       </section>

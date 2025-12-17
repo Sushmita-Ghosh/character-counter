@@ -1,10 +1,6 @@
-function countWord(text) {
-  const wordList = text.split(" ").filter((item) => item !== "");
-  return wordList.length;
-}
+export function getReadingTime(text, wordsPerMin = 200) {
+  if (!text.trim()) return 0;
 
-function getReadingTime(text, wordsPerMin) {
-  return Math.ceil(countWord(text) / wordsPerMin);
+  const words = text.trim().split(/\s+/).length;
+  return Math.ceil(words / wordsPerMin);
 }
-
-export { getReadingTime };
