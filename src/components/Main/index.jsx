@@ -42,7 +42,7 @@ export default function Main() {
     max_length: content.maxlength,
   });
 
-  // console.log(isLimitReached, limitAlert, content);
+  console.log(isLimitReached, limitAlert, content);
 
   return (
     <main className="main">

@@ -34,7 +34,7 @@ export default function Options({ content, setContent }) {
     // console.log("Type of", typeof e.target.value);
     setContent((prev) => ({
       ...prev,
-      maxlength: e.target.value,
+      maxlength: e.target.value === "" ? "" : Number(e.target.value),
     }));
   };
 
