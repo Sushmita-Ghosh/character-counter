@@ -71,7 +71,7 @@ export default function Options({ content, setContent }) {
             type="number"
             onChange={handleMaxLengthChange}
             className="max-length"
-            value={content.maxlength}
+            value={content.maxlength ?? ""}
           />
         )}
       </div>

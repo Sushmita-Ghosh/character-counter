@@ -1,6 +1,11 @@
 import Banner from "./Banner";
 import "./BannerList.css";
 import { useText } from "../../context/TextContext";
+import {
+  countSentences,
+  countTotalNumberOfWords,
+  countWithoutSpaces,
+} from "./bannerUtils";
 
 export default function BannerList({ userinput, nospace }) {
   const text = useText();
@@ -15,17 +20,17 @@ export default function BannerList({ userinput, nospace }) {
   const banners = [
     {
       title: text.banner_title_total,
-      value: null, // TODO
+      value: nospace ? countWithoutSpaces(userinput) : userinput.length, // TODO
       class: "total-count",
     },
     {
       title: text.banner_title_word,
-      value: null, // TODO
+      value: countTotalNumberOfWords(userinput), //TODO
       class: "word-count",
     },
     {
       title: text.banner_title_sentence,
-      value: null, // TODO
+      value: countSentences(userinput), // TODO
       class: "sentence-count",
     },
   ];
@@ -34,7 +39,7 @@ export default function BannerList({ userinput, nospace }) {
   // Decide if you want to format numbers (e.g. leading zeros)
   const formatDigits = (num) => {
     // TODO
-    return num;
+    return num < 10 ? `0${num}` : num.toString();
   };
 
   const bannerSetList = banners.map((item, index) => (

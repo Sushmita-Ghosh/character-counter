@@ -14,10 +14,10 @@ export default function ReadingTime({ userinput }) {
 
   const displayText = text.reading_time_display;
   const displayMap = text.reading_time_value;
-  console.log(displayMap);
+  // console.log(displayMap);
 
   const readTimeValue = getReadingTime(userinput, 200);
-  console.log(readTimeValue);
+  // console.log(readTimeValue);
 
   const readingText = formatText(
     displayText,

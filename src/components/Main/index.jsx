@@ -75,7 +75,9 @@ export default function Main() {
 
       <section>
         <BannerList
-        /* TODO */
+          /* TODO */
+          userinput={content.userinput}
+          nospace={content.nospace}
         />
       </section>
 
